@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>  {% block title %}{% endblock title %} Pet_House</title>
+    {% load static %}
+    <!-- Local Bootstrap CSS -->
+     <link href="{% static 'bootstrap-5.3.3-dist/css/bootstrap.min.css' %}" rel="stylesheet">
+  </head>
+  <body>
+    <header class="bg-white text-dark py-2 border shadow-sm hover-effect fixed-top">
+      <div class="container d-flex justify-content-between align-items-center">
+          <div class="logo-container d-flex align-items-center">
+              <img src="{% static 'img\logo.jpeg' %}" alt="Logo" class="rounded-circle me-2"
+                  style="width: 75px; height: 75px; object-fit: cover;">
+              <h2 class="h3 m-1 fw-bold">STAR Pet House</h2>
+          </div>
+          <nav>
+              <ul class="nav">
+                  <li class="nav-item"><a class="nav-link text-dark" href="/">Home</a></li>
+                  <li class="nav-item"><a class="nav-link text-dark" href="/#about">About Us</a></li>
+                  <li class="nav-item"><a class="nav-link text-dark" href="/service">Services</a></li>
+                  <li class="nav-item"><a class="nav-link text-dark" href="/product">Product</a></li>
+                  <li class="nav-item"><a class="nav-link text-dark" href="/contact">Contact</a></li>
+              </ul>
+
+          </nav>
+      </div>
+  </header>
+  <style>
+      .hover-effect:hover {
+          transform: scale(1.05);
+      }
+  </style> 
+
+
+{% if messages %}
+{% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0 " role="alert">
+      {{ message }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+      </button>
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% block body %}{% endblock body %}
+    {% block footer %}
+     <!-- Footer Section -->
+ <footer class="bg-dark text-white text-center py-3">
+  <div class="container">
+      <p>&copy; 2024 STAR Pet House. All rights reserved.</p>
+  </div>
+</footer>{% endblock %} 
+
+    <script src="{% static 'bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js' %}"></script>
+  </body>
+</html>

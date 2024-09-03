@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+{% block title %}Service{% endblock title %}
+{% load static %}
+ {% block body %} 
+ <br><br>
+ <section id="services" class="py-5 bg-light">
+    <h2 class="text-center mt-5 mb-4 text-dark">Our Services</h2>
+    <p class="text-center text-dark"> At STAR Pet House, we offer a variety of services to ensure your furry friends are well taken care of.</p>
+
+
+
+         <div class="row text-center">
+             <!-- Pet Grooming -->
+             <div class="col-md-4">
+                <a href="/product" class="text-decoration-none">
+                 <div class="card h-100 shadow-sm border-0">
+                     <div class="card-body p-4">
+                         <div class="icon mb-3">
+                             <i class="fas fa-cut text-primary fa-2x"></i>
+                         </div>
+                         <img src="{% static 'img\grooming.jpg' %}" alt="Pet Grooming" class="img-fluid mb-3 service-img">
+                         <h3>Pet Grooming</h3>
+                         <p>Keep your pets looking their best with our professional grooming services.</p>
+                     </div>
+                 </div>
+                </a>
+             </div>
+             <!-- Day Care -->
+             <div class="col-md-4">
+                <a href="/contact" class="text-decoration-none">
+                 <div class="card h-100 shadow-sm border-0">
+                     <div class="card-body p-4">
+                         <div class="icon mb-3">
+                             <i class="fas fa-home text-success fa-2x"></i>
+                         </div>
+                         <img src="{% static 'img\daycare.jpg' %}" alt="Day Care" class="img-fluid mb-3 service-img">
+                         <h3>Day Care</h3>
+                         <p>Going out of town? Leave your pets with us, and we'll take great care of them.</p>
+                     </div>
+                 </div>
+                </a>
+             </div>
+             <!-- Pet Training -->
+             <div class="col-md-4">
+                <a href="/contact" class="text-decoration-none">
+                 <div class="card h-100 shadow-sm border-0">
+                     <div class="card-body p-4">
+                         <div class="icon mb-3">
+                             <i class="fas fa-dog text-warning fa-2x"></i>
+                         </div>
+                         <img src="{% static 'img\tranning.png' %}" alt="Pet Training" class="img-fluid mb-3 service-img">
+                         <h3>Pet Training</h3>
+                         <p>Our expert trainers will help your pets learn new skills and behaviors.</p>
+                     </div>
+                 </div>
+                </a>
+             </div>
+
+             <!-- Pet treatment -->
+             <div class="col-md-4">
+                <a href="/contact" class="text-decoration-none">
+                 <div class="card h-100 shadow-sm border-0">
+                     <div class="card-body p-4">
+                         <div class="icon mb-3">
+                             <i class="fas fa-cut text-primary fa-2x"></i>
+                         </div>
+                         <img src="{% static 'img\treatment.png' %}" alt="Pet Grooming" class="img-fluid mb-3 service-img">
+                         <h3>Pet Health-checkup</h3>
+                         <p>Ensure your pets' well-being with our professional health check-up services.</p>
+                     </div>
+                 </div>
+                </a>
+             </div>
+
+             <!-- Pet photography -->
+             <div class="col-md-4">
+                <a href="/contact" class="text-decoration-none">
+                     <div class="card h-100 shadow-sm border-0">
+                         <div class="card-body p-4">
+                             <div class="icon mb-3">
+                                 <i class="fas fa-cut text-primary fa-2x"></i>
+                             </div>
+                             <img src="{% static 'img\photography.jpg' %}" alt="Pet Grooming" class="img-fluid mb-3 service-img">
+                             <h3>Pet Photography</h3>
+                             <p>Capture beautiful moments of your pets with our professional photography services.
+                             </p>
+                         </div>
+                     </div>
+                 </a>
+             </div>
+
+             <!-- Pet party -->
+             <div class="col-md-4">
+                <a href="/contact" class="text-decoration-none">
+                     <div class="card h-100 shadow-sm border-0">
+                         <div class="card-body p-4">
+                             <div class="icon mb-3">
+                                 <i class="fas fa-cut text-primary fa-2x"></i>
+                             </div>
+                             <img src="{% static 'img\party.png' %}" alt="Pet Grooming" class="img-fluid mb-3 service-img">
+                             <h3>Pet Party</h3>
+                             <p>Organize unforgettable celebrations for your pets with our party planning services.
+                             </p>
+                         </div>
+                     </div>
+                 </a>
+             </div>
+
+
+             <!-- Pet Product -->
+             <div class="card h-100 shadow-sm border-0 mb-4">
+                 <a href="/contact" class="text-decoration-none">
+                     <div class="card-body p-4">
+                         <div class="icon mb-3">
+                             <i class="fas fa-cut text-primary fa-2x"></i>
+                         </div>
+                         <div class="d-flex justify-content-center align-items-center">
+                             <img src="{% static 'img\Product.png' %}" alt="Pet Product" class="img-fluid mb-3 service-img mx-2"
+                                 style="width: 30%;">
+                             <img src="{% static 'img\product3.jpg' %}" alt="Pet Product" class="img-fluid mb-3 service-img mx-2"
+                                 style="width: 30%;">
+                             <img src="{% static 'img\product2.png' %}" alt="Pet Product" class="img-fluid mb-3 service-img mx-2"
+                                 style="width: 30%;">
+                         </div>
+                         <h3 class="text-dark text-center">Pet Product</h3>
+                         <p class="text-dark text-center">Explore our range of high-quality products designed for
+                             your pets.</p>
+                     </div>
+                 </a>
+             </div>
+
+
+             <h3 class="text-center text-dark font-weight-bold"> Your pet's comfort is our top priority. We believe that every pet deserves to be pampered, and that's exactly what we do at STAR Pet House.</h3>
+         </div>
+     </div>
+ </section>
+ <style>
+    body {
+        overflow-x: hidden; 
+    }
+     .service-img {
+         transition: transform 0.3s ease;
+         height: auto;
+         height: 200px;
+     }
+
+     .card:hover .service-img {
+         transform: scale(1.1);
+     }
+
+     .card-body {
+         background: linear-gradient(135deg, #f6f6f6 0%, #e9ecef 100%);
+         border-radius: 10px;
+     }
+
+     .icon {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+     }
+ </style>
+{% endblock body %}
+ 

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Pet House</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="bg-white text-dark py-2 border shadow-sm hover-effect fixed-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="logo-container d-flex align-items-center">
+                <img src="D:\Django\pet_house\static\img\logo.jpeg" alt="Logo" class="rounded-circle me-2"
+                    style="width: 75px; height: 75px; object-fit: cover;">
+                <h2 class="h3 m-1 fw-bold">STAR Pet House</h2>
+            </div>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link text-dark" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#about">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#shop">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#contact">Contact</a></li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+    <style>
+        .hover-effect:hover {
+            transform: scale(1.05);
+        }
+    </style>
+
+
+
+    <!-- Main Banner Section -->
+    <section id="home" class="banner d-flex align-items-center text-center text-dark"
+        style="background: url('banner.png') no-repeat center center/contain; height: 400px; margin-top: 50px;">
+        <!-- Banner Image Only -->
+    </section>
+
+    <!-- Banner Text Section -->
+    <section id="banner-text" class="text-center mt-4">
+        <div class="container">
+            <h2>Welcome to STAR Pet House</h2>
+            <p>Your one-stop shop for all your pet needs!</p>
+            <a href="#shop" class="btn btn-danger mt-3">Shop Now</a>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+
+    <section id="about" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="mb-4">About Us</h2>
+
+            <!-- Images Section -->
+            <div class="row mb-4">
+                <div class="col-md-4 mb-3">
+                    <img src="D:\Django\pet_house\static\img\kitty.png" alt="Adorable Kitten"
+                        class="img-fluid rounded-circle" style="max-width: 200px; height: 200px; object-fit: cover;">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <img src="D:\Django\pet_house\static\img\doggy.png" alt="Cute Puppy"
+                        class="img-fluid rounded-circle" style="max-width: 200px; height: 200px; object-fit: cover;">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <img src="D:\Django\pet_house\static\img\cattoy.jpg" alt="Colorful Parrot"
+                        class="img-fluid rounded-circle" style="max-width: 200px; height: 200px; object-fit: cover;">
+                </div>
+            </div>
+
+            <!-- About Us Text -->
+            <p class="lead mb-4 highlight-text" style=" font-size: 1.2em; font-weight: bold;">
+                Welcome to Star Pet House, where every pet is a star! 🌟 Our dedicated team is passionate about
+                providing your furry friends with the very best care and attention.
+            </p>
+            <p class="mb-4" style="font-size: 1.1em;">
+                From premium pet food to stylish accessories and expert grooming services, we offer everything your pet
+                needs to shine. We understand that pets are family, and we’re committed to giving them the love and care
+                they deserve.
+            </p>
+            <p style="font-size: 1.1em;">
+                Whether you're searching for a cozy bed for your kitty or a fun toy for your pup, we've got you covered.
+                Join our family of happy customers and let us help you keep your pets happy, healthy, and looking their
+                best!
+            </p>
+            <p style=" font-size: 1.1em; font-weight: bold;">
+                Come visit us today and let your pet experience the BEST treatment! We can’t wait to meet your adorable
+                companions! 🐾
+            </p>
+    </section>
+
+
+
+
+
+    <!-- Services Section -->
+
+    <section id="services" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Services</h2>
+            <div class="row text-center">
+                <!-- Pet Grooming -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <div class="icon mb-3">
+                                <i class="fas fa-cut text-primary fa-2x"></i>
+                            </div>
+                            <img src="grooming.jpg" alt="Pet Grooming" class="img-fluid mb-3 service-img">
+                            <h3>Pet Grooming</h3>
+                            <p>Keep your pets looking their best with our professional grooming services.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Day Care -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <div class="icon mb-3">
+                                <i class="fas fa-home text-success fa-2x"></i>
+                            </div>
+                            <img src="daycar.jpg" alt="Day Care" class="img-fluid mb-3 service-img">
+                            <h3>Day Care</h3>
+                            <p>Going out of town? Leave your pets with us, and we'll take great care of them.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pet Training -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <div class="icon mb-3">
+                                <i class="fas fa-dog text-warning fa-2x"></i>
+                            </div>
+                            <img src="trainn.png" alt="Pet Training" class="img-fluid mb-3 service-img">
+                            <h3>Pet Training</h3>
+                            <p>Our expert trainers will help your pets learn new skills and behaviors.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pet treatment -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <div class="icon mb-3">
+                                <i class="fas fa-cut text-primary fa-2x"></i>
+                            </div>
+                            <img src="treatment.png" alt="Pet Grooming" class="img-fluid mb-3 service-img">
+                            <h3>Pet Health-checkup</h3>
+                            <p>Ensure your pets' well-being with our professional health check-up services.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pet photography -->
+                <div class="col-md-4">
+                    <a href="#contact" class="text-decoration-none">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body p-4">
+                                <div class="icon mb-3">
+                                    <i class="fas fa-cut text-primary fa-2x"></i>
+                                </div>
+                                <img src="photography.jpg" alt="Pet Grooming" class="img-fluid mb-3 service-img">
+                                <h3>Pet Photography</h3>
+                                <p>Capture beautiful moments of your pets with our professional photography services.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Pet party -->
+                <div class="col-md-4">
+                    <a href="#contact" class="text-decoration-none">
+                        <div class="card h-100 shadow-sm border-0">
+                            <div class="card-body p-4">
+                                <div class="icon mb-3">
+                                    <i class="fas fa-cut text-primary fa-2x"></i>
+                                </div>
+                                <img src="party.png" alt="Pet Grooming" class="img-fluid mb-3 service-img">
+                                <h3>Pet Party</h3>
+                                <p>Organize unforgettable celebrations for your pets with our party planning services.
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+                <!-- Pet Product -->
+                <div class="card h-100 shadow-sm border-0 mb-4">
+                    <a href="#shop" class="text-decoration-none">
+                        <div class="card-body p-4">
+                            <div class="icon mb-3">
+                                <i class="fas fa-cut text-primary fa-2x"></i>
+                            </div>
+                            <div class="d-flex justify-content-center align-items-center">
+                                <img src="product.png" alt="Pet Product" class="img-fluid mb-3 service-img mx-2"
+                                    style="width: 30%;">
+                                <img src="product3.jpg" alt="Pet Product" class="img-fluid mb-3 service-img mx-2"
+                                    style="width: 30%;">
+                                <img src="product2.png" alt="Pet Product" class="img-fluid mb-3 service-img mx-2"
+                                    style="width: 30%;">
+                            </div>
+                            <h3 class="text-dark text-center">Pet Product</h3>
+                            <p class="text-dark text-center">Explore our range of high-quality products designed for
+                                your pets.</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <style>
+        .service-img {
+            transition: transform 0.3s ease;
+            height: auto;
+            height: 300px;
+        }
+
+        .card:hover .service-img {
+            transform: scale(1.1);
+        }
+
+        .card-body {
+            background: linear-gradient(135deg, #f6f6f6 0%, #e9ecef 100%);
+            border-radius: 10px;
+        }
+
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+
+
+    <!-- Shop Section -->
+    <section id="shop" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Shop Our Products</h2>
+            <div class="row text-center">
+                <!-- Product 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <div class="icon mb-3">
+                                <i class="fas fa-box-open text-primary fa-2x"></i>
+                            </div>
+                            <img src="cage.jpg" alt="Product 1" class="img-fluid mb-3 service-img">
+                            <h3>Product 1</h3>
+                            <p>Description of Product 1.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <h3>$10</h3>
+                                <button type="button" class="btn btn-outline-dark btn-lg custom-btn">BUY</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <div class="icon mb-3">
+                                <i class="fas fa-box-open text-success fa-2x"></i>
+                            </div>
+                            <img src="bowl.jpg" alt="Product 2" class="img-fluid mb-3 service-img">
+                            <h3>Product 2</h3>
+                            <p>Description of Product 2.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <h3>$10</h3>
+                                <button type="button" class="btn btn-outline-dark btn-lg custom-btn">BUY</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body p-4">
+                            <div class="icon mb-3">
+                                <i class="fas fa-box-open text-warning fa-2x"></i>
+                            </div>
+                            <img src="product3.jpg" alt="Product 3" class="img-fluid mb-3 service-img">
+                            <h3>Product 3</h3>
+                            <p>Description of Product 3.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <h3>$10</h3>
+                                <button type="button" class="btn btn-outline-dark btn-lg custom-btn">BUY</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .service-img {
+            transition: transform 0.3s ease;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card:hover .service-img {
+            transform: scale(1.1);
+        }
+
+        .card-body {
+            background: linear-gradient(135deg, #f6f6f6 0%, #e9ecef 100%);
+            border-radius: 10px;
+        }
+
+        .icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-dark text-white py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <form action="submit_form.php" method="post" class="mx-auto" style="max-width: 600px;">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" id="name" name="name" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" id="email" name="email" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message:</label>
+                    <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-danger">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 STAR Pet House. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

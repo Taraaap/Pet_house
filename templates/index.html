@@ -1,0 +1,69 @@
+<!doctype html>
+{% extends "base.html" %}
+{% block body %} {% load static %}
+
+
+
+    <!-- Main Banner Section -->
+    <section id="home" class="banner d-flex align-items-center text-center text-dark"
+        style="background: url({% static 'img\banner.png' %}) no-repeat center center/contain; height: 400px; margin-top: 50px;">
+        <!-- Banner Image Only -->
+    </section>
+
+    <!-- Banner Text Section -->
+    <section id="banner-text" class="text-center mt-4">
+        <div class="container">
+            <h2>Welcome to STAR Pet House</h2>
+            <p>Your one-stop shop for all your pet needs!</p>
+            <a href="/product" class="btn btn-danger mt-3">Shop Now</a>
+        </div>
+    </section>
+
+   <!-- About Section -->
+
+   <section id="about" class="py-5 bg-light">
+    <div class="container text-center">
+        
+
+        <!-- Images Section -->
+        <div class="row mb-4">
+            <div class="col-md-4 mb-3">
+                <img src="{% static 'img\kitty.png' %}" alt="Kitten"
+                    class="img-fluid rounded-circle" style="max-width: 200px; height: 200px; object-fit: cover;">
+            </div>
+            <div class="col-md-4 mb-3">
+                <img src="{% static 'img\doggy.png' %}" alt="Puppy"
+                    class="img-fluid rounded-circle" style="max-width: 200px; height: 200px; object-fit: cover;">
+            </div>
+            <div class="col-md-4 mb-3">
+                <img src="{% static 'img\cattoy.jpg' %}" alt="..t"
+                    class="img-fluid rounded-circle" style="max-width: 200px; height: 200px; object-fit: cover;">
+            </div>
+        </div>
+
+        <!-- About Us Text -->
+        <p class="lead mb-4 highlight-text" style=" font-size: 1.2em; font-weight: bold;">
+            Welcome to Star Pet House, where every pet is a star! 🌟 Our dedicated team is passionate about
+            providing your furry friends with the very best care and attention.
+        </p>
+        <p class="mb-4" style="font-size: 1.1em;">
+            From premium pet food to stylish accessories and expert grooming services, we offer everything your pet
+            needs to shine. We understand that pets are family, and we’re committed to giving them the love and care
+            they deserve.
+        </p>
+        <p style="font-size: 1.1em;">
+            Whether you're searching for a cozy bed for your kitty or a fun toy for your pup, we've got you covered.
+            Join our family of happy customers and let us help you keep your pets happy, healthy, and looking their
+            best!
+        </p>
+        <p style=" font-size: 1.1em; font-weight: bold;">
+            Come visit us today and let your pet experience the BEST treatment! We can’t wait to meet your adorable
+            companions! 🐾
+        </p>
+</section>
+
+
+
+{% endblock body %}
+
+
