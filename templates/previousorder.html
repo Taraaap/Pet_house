@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% block title %}Your Orders{% endblock %}
+{% block footer %}{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5 pt-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="fw-bold text-danger mb-0">Your Orders</h2>
+    </div>
+
+    {% for order in orders %}
+
+    <div class="card shadow-sm border-0 mb-3 rounded-4">
+
+        <div class="card-body">
+
+            <div class="row align-items-center g-3">
+
+                
+                <div class="col-md-2 text-center">
+                    <img src="{{ order.product.image.url }}"
+                         class="rounded-3"
+                         style="width:85px;height:85px;object-fit:cover;">
+                </div>
+
+                
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-1">{{ order.product.name }}</h5>
+
+                    <p class="mb-1 text-muted">
+                        Size: <b>{{ order.size }}</b>
+                    </p>
+
+                    <p class="mb-1 text-muted">
+                        Quantity: <b>{{ order.quantity }}</b>
+                    </p>
+
+                    <p class="mb-0 text-muted">
+                        Payment:
+                        <span class="fw-semibold text-dark">
+                            {{ order.payment_method }}
+                        </span>
+                    </p>
+                </div>
+
+                
+                <div class="col-md-3">
+                    <p class="mb-1 text-muted">
+                        <i class="fas fa-phone"></i>
+                        {{ order.phone }}
+                    </p>
+
+                    <p class="mb-1 text-muted small">
+                        {{ order.address|truncatewords:8 }}
+                    </p>
+
+                    
+                    <p class="mb-0">
+                        {% if order.status == "PENDING" %}
+                            <span class="badge bg-warning text-dark">Pending</span>
+                        {% elif order.status == "CONFIRMED" %}
+                            <span class="badge bg-primary">Confirmed</span>
+                        {% elif order.status == "DELIVERED" %}
+                            <span class="badge bg-success">Delivered</span>
+                        {% endif %}
+                    </p>
+                </div>
+
+                
+                <div class="col-md-3 text-md-end text-start">
+                    <h5 class="fw-bold text-danger mb-1">
+                        ${{ order.total_price }}
+                    </h5>
+
+                    <small class="text-muted">
+                        {{ order.created_at }}
+                    </small>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    {% empty %}
+
+    <div class="text-center py-5">
+        <h5 class="text-muted">No previous orders found 🛒</h5>
+    </div>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% block title %}Profile{% endblock %}
+
+{% block footer %}
+{% endblock %}
+{% block body %}
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+
+    <div class="card shadow-lg border-0" style="width: 420px; border-radius: 15px;">
+
+        <div class="card-body text-center p-4">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+                 style="width:100px;height:100px;border-radius:50%;" class="mb-3">
+
+            <h4 class="fw-bold">User Profile</h4>
+
+            <hr>
+
+            <p><b>Username:</b> {{ user.username }}</p>
+            <p><b>Email:</b> {{ user.email }}</p>
+            <p><b>Date Joined:</b> {{ user.date_joined }}</p>
+
+            <!-- EDIT BUTTON -->
+            <button class="btn btn-danger w-100" data-bs-toggle="modal" data-bs-target="#editModal">
+                Edit Profile
+            </button>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- 🔥 EDIT MODAL -->
+<div class="modal fade" id="editModal" tabindex="-1">
+
+  <div class="modal-dialog">
+
+    <div class="modal-content border-0 shadow">
+
+      <form method="POST" action="{% url 'update_profile' %}">
+        {% csrf_token %}
+
+        <div class="modal-header bg-dark text-white">
+          <h5 class="modal-title">Edit Profile</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+
+            <label class="form-label">Username</label>
+            <input type="text" name="username" value="{{ user.username }}" class="form-control mb-3">
+
+            <label class="form-label">Email</label>
+            <input type="email" name="email" value="{{ user.email }}" class="form-control mb-3">
+
+            <hr>
+
+            <label class="form-label">New Password (optional)</label>
+            <input type="password" name="password" class="form-control mb-2"
+                   placeholder="Enter new password">
+
+            <small class="text-muted">
+                Leave empty if you don’t want to change password
+            </small>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger w-100">
+              Save Changes
+          </button>
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock %}

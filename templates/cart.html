@@ -1,0 +1,144 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Cart{% endblock title %}
+
+
+{% block body %}
+
+<div class="container mt-5 pt-5">
+
+    
+    {% if cart_items %}
+
+    <div class="row g-4">
+
+        
+        <div class="col-lg-8">
+
+            {% for item in cart_items %}
+
+            <div class="card mb-3 shadow-sm border-0">
+
+                <div class="card-body">
+
+                    <div class="row align-items-center">
+
+                       
+                        <div class="col-md-2 text-center">
+                            <img src="{{ item.product.image.url }}"
+                                 class="img-fluid rounded"
+                                 style="height:80px;width:80px;object-fit:cover;">
+                        </div>
+
+                        
+                        <div class="col-md-4">
+                            <h5 class="mb-1">{{ item.product.name }}</h5>
+                            <p class="text-muted mb-0">
+                                Size: {{ item.size }}
+                            </p>
+
+                            <p class="text-danger fw-bold mb-0">
+                                Rs{{ item.product.price }}
+                            </p>
+                        </div>
+
+                       
+                    <div class="col-md-3 text-center">
+
+                        <form method="POST"
+                            action="{% url 'update_cart' item.id %}">
+                            {% csrf_token %}
+
+                            <input type="number"
+                                name="quantity"
+                                value="{{ item.quantity }}"
+                                min="1"
+                                onchange="this.form.submit()"
+                                class="form-control text-center">
+                        </form>
+
+                    </div>
+
+                        
+                        <div class="col-md-2 text-center">
+                            <h6 class="fw-bold text-success">
+                                Rs{{ item.get_total }}
+                            </h6>
+                        </div>
+
+                        
+                        <div class="col-md-1 text-center">
+                            <a href="{% url 'remove_from_cart' item.id %}"
+                               class="btn btn-sm btn-danger">
+                                ✕
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+        <div class="col-lg-4">
+
+            <div class="card shadow border-0 p-3">
+
+                <h4 class="mb-3">Order Summary</h4>
+
+                <hr>
+
+                <div class="d-flex justify-content-between mb-2">
+                    <span>Subtotal</span>
+                    <span>Rs{{ cart_total }}</span>
+                </div>
+
+                {% with shipping=150 %}
+
+
+            <div class="d-flex justify-content-between mb-2">
+                <span>Shipping</span>
+                <span class="text-success">Rs{{ shipping }}</span>
+            </div>
+
+
+
+{% endwith %}
+
+                <hr>
+
+                <div class="d-flex justify-content-between fw-bold">
+                    <span>Total</span>
+                    <span class="text-danger">Rs{{ total }}</span>
+                </div>
+
+                <a href="{% url 'checkout' %}"
+                   class="btn btn-dark w-100 mt-3">
+                    Checkout
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    {% else %}
+
+    <div class="text-center mt-5">
+        <h4 class="text-muted">Your cart is empty</h4>
+        <a href="/product" class="btn btn-danger mt-3">
+            Continue Shopping
+        </a>
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}

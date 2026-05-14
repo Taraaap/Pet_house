@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Login{% endblock %}
+
+{% block footer %}
+{% endblock %}
+
+{% block body %}
+
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 80vh;">
+
+  <div class="card shadow-lg border-0" style="width: 400px; border-radius: 15px;">
+
+    <div class="card-body p-4">
+
+      <h3 class="text-center mb-4 fw-bold">Login</h3>
+
+      <form method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+
+        <div class="mb-3">
+          <label class="form-label">Username</label>
+          <input type="text" name="username" class="form-control" placeholder="Enter username">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input type="password" name="password" class="form-control" placeholder="Enter password">
+        </div>
+
+        <button type="submit" class="btn btn-danger w-100">
+          Login
+        </button>
+
+      </form>
+
+      <p class="text-center mt-3 mb-0" style="font-size: 14px;">
+        Don't have an account?
+        <a href="/register/" class="text-decoration-black fw-bold">Sign Up</a>
+      </p>
+
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Orders{% endblock %}
+
+{% block body %}
+
+<div class="container mt-5 pt-5">
+
+    <h2 class="mb-4">🧾 Previous Orders</h2>
+
+    {% if orders %}
+
+        <table class="table table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>Product</th>
+                    <th>Qty</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for item in orders %}
+                <tr>
+                    <td>{{ item.product.name }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td>{{ item.product.price }}</td>
+                    <td>{{ item.get_total }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h4 class="text-end">
+            Total Spent: ${{ total }}
+        </h4>
+
+    {% else %}
+        <p>No orders yet.</p>
+    {% endif %}
+
+</div>
+
+{% endblock %}

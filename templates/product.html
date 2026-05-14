@@ -1,356 +1,193 @@
 {% extends "base.html" %}
-{% block title %}Shop{% endblock title %}
+{% block title %}Shop{% endblock %}
 {% load static %}
- {% block body %}
- 
- <br><br><br>
-  <img src="{%static 'img\banner1.jpg'%}" class="d-block w-100" alt="..">  
 
-    <!-- Shop Section -->
-    <section id="shop" class="bg-light py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Shop Our Products</h2>
-            <div class="row text-center">
-                <!-- Product 1 -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body p-4">
-                            <div class="icon mb-3">
-                                <i class="fas fa-box-open text-primary fa-2x"></i>
-                            </div>
-                            <img src="{% static 'img\Product\cage.jpg' %}"alt="Product " class="img-fluid mb-3 service-img">
-                            <h3>Product 1</h3>
-                            <p>Description of Product 1.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-4">
-                                <h3>$10</h3>
-                                <button type="button" class="btn btn-outline-dark btn-lg custom-btn">BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product 2 -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body p-4">
-                            <div class="icon mb-3">
-                                <i class="fas fa-box-open text-primary fa-2x"></i>
-                            </div>
-                            <img src="{% static 'img\bowl.jpg' %}" alt="Product " class="img-fluid mb-3 service-img">
-                            <h3>Product 2</h3>
-                            <p>Description of Product 2.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-4">
-                                <h3>$10</h3>
-                                <button type="button" class="btn btn-outline-dark btn-lg custom-btn">BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product 3 -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body p-4">
-                            <div class="icon mb-3">
-                                <i class="fas fa-box-open text-primary fa-2x"></i>
-                            </div>
-                            <img src="{%static 'img\product\pedifree.png'%}" alt="Product " class="img-fluid mb-3 service-img">
-                            <h3>Product 3</h3>
-                            <p>Description of Product 3.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-4">
-                                <h3>$10</h3>
-                                <button type="button" class="btn btn-outline-dark btn-lg custom-btn">BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product 4 -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body p-4">
-                            <div class="icon mb-3">
-                                <i class="fas fa-box-open text-warning fa-2x"></i>
-                            </div>
-                            <img src="{%static 'img\product\ainifishfood.jpg'%}" alt="Product " class="img-fluid mb-3 service-img">
-                            <h3>Product 4</h3>
-                            <p>Description of Product 4.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-4">
-                                <h3>$10</h3>
-                                <button type="button" class="btn btn-outline-dark btn-lg custom-btn">BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product 5 -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body p-4">
-                            <div class="icon mb-3">
-                                <i class="fas fa-box-open text-warning fa-2x"></i>
-                            </div>
-                            <img src="{%static 'img\product\bed.jpg'%}" alt="Product " class="img-fluid mb-3 service-img">
-                            <h3>Product 4</h3>
-                            <p>Description of Product 4.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-4">
-                                <h3>$10</h3>
-                                <button type="button" class="btn btn-outline-dark btn-lg custom-btn">BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product 6 -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body p-4">
-                            <div class="icon mb-3">
-                                <i class="fas fa-box-open text-warning fa-2x"></i>
-                            </div>
-                            <img src="{%static 'img\product\catbowl.jpg'%}" alt="Product " class="img-fluid mb-3 service-img">
-                            <h3>Product 4</h3>
-                            <p>Description of Product 4.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-4">
-                                <h3>$10</h3>
-                                <button type="button" class="btn btn-outline-dark btn-lg custom-btn">BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product 7-->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body p-4">
-                            <div class="icon mb-3">
-                                <i class="fas fa-box-open text-warning fa-2x"></i>
-                            </div>
-                            <img src="{%static 'img\product\cathouse.jpg'%}" alt="Product " class="img-fluid mb-3 service-img">
-                            <h3>Product 4</h3>
-                            <p>Description of Product 4.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-4">
-                                <h3>$10</h3>
-                                <button type="button" class="btn btn-outline-dark btn-lg custom-btn">BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product 8-->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body p-4">
-                            <div class="icon mb-3">
-                                <i class="fas fa-box-open text-warning fa-2x"></i>
-                            </div>
-                            <img src="{%static 'img\product\catss.jpg'%}" alt="Product " class="img-fluid mb-3 service-img">
-                            <h3>Product 4</h3>
-                            <p>Description of Product 4.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-4">
-                                <h3>$10</h3>
-                                <button type="button" class="btn btn-outline-dark btn-lg custom-btn">BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product 9 -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body p-4">
-                            <div class="icon mb-3">
-                                <i class="fas fa-box-open text-warning fa-2x"></i>
-                            </div>
-                            <img src="{%static 'img\product\cattoy.jpg'%}" alt="Product " class="img-fluid mb-3 service-img">
-                            <h3>Product 4</h3>
-                            <p>Description of Product 4.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-4">
-                                <h3>$10</h3>
-                                <button type="button" class="btn btn-outline-dark btn-lg custom-btn">BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        
-                <!-- Product 10 -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body p-4">
-                            <div class="icon mb-3">
-                                <i class="fas fa-box-open text-warning fa-2x"></i>
-                            </div>
-                            <img src="{%static 'img\product\clean.png'%}" alt="Product " class="img-fluid mb-3 service-img">
-                            <h3>Product 4</h3>
-                            <p>Description of Product 4.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-4">
-                                <h3>$10</h3>
-                                <button type="button" class="btn btn-outline-dark btn-lg custom-btn">BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product 11-->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body p-4">
-                            <div class="icon mb-3">
-                                <i class="fas fa-box-open text-warning fa-2x"></i>
-                            </div>
-                            <img src="{%static 'img\product\fishhome.jpg'%}" alt="Product " class="img-fluid mb-3 service-img">
-                            <h3>Product 4</h3>
-                            <p>Description of Product 4.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-4">
-                                <h3>$10</h3>
-                                <button type="button" class="btn btn-outline-dark btn-lg custom-btn">BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product 12 -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body p-4">
-                            <div class="icon mb-3">
-                                <i class="fas fa-box-open text-warning fa-2x"></i>
-                            </div>
-                            <img src="{%static 'img\product\fishfood.jpg'%}" alt="Product " class="img-fluid mb-3 service-img">
-                            <h3>Product 4</h3>
-                            <p>Description of Product 4.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-4">
-                                <h3>$10</h3>
-                                <button type="button" class="btn btn-outline-dark btn-lg custom-btn">BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product 13 -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body p-4">
-                            <div class="icon mb-3">
-                                <i class="fas fa-box-open text-warning fa-2x"></i>
-                            </div>
-                            <img src="{%static 'img\product\house.jpg'%}" alt="Product " class="img-fluid mb-3 service-img">
-                            <h3>Product 4</h3>
-                            <p>Description of Product 4.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-4">
-                                <h3>$10</h3>
-                                <button type="button" class="btn btn-outline-dark btn-lg custom-btn">BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product 14 -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body p-4">
-                            <div class="icon mb-3">
-                                <i class="fas fa-box-open text-warning fa-2x"></i>
-                            </div>
-                            <img src="{%static 'img\product\olivshampoo.jpg'%}" alt="Product " class="img-fluid mb-3 service-img">
-                            <h3>Product 4</h3>
-                            <p>Description of Product 4.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-4">
-                                <h3>$10</h3>
-                                <button type="button" class="btn btn-outline-dark btn-lg custom-btn">BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product 15 -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body p-4">
-                            <div class="icon mb-3">
-                                <i class="fas fa-box-open text-warning fa-2x"></i>
-                            </div>
-                            <img src="{%static 'img\product\parrotstand.jpg'%}" alt="Product " class="img-fluid mb-3 service-img">
-                            <h3>Product 4</h3>
-                            <p>Description of Product 4.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-4">
-                                <h3>$10</h3>
-                                <button type="button" class="btn btn-outline-dark btn-lg custom-btn">BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product 16 -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body p-4">
-                            <div class="icon mb-3">
-                                <i class="fas fa-box-open text-warning fa-2x"></i>
-                            </div>
-                            <img src="{%static 'img\product\patta.jpg'%}" alt="Product " class="img-fluid mb-3 service-img">
-                            <h3>Product 4</h3>
-                            <p>Description of Product 4.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-4">
-                                <h3>$10</h3>
-                                <button type="button" class="btn btn-outline-dark btn-lg custom-btn">BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        
-                <!-- Product 17 -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body p-4">
-                            <div class="icon mb-3">
-                                <i class="fas fa-box-open text-warning fa-2x"></i>
-                            </div>
-                            <img src="{%static 'img\product\toy.jpg'%}" alt="Product " class="img-fluid mb-3 service-img">
-                            <h3>Product 4</h3>
-                            <p>Description of Product 4.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-4">
-                                <h3>$10</h3>
-                                <button type="button" class="btn btn-outline-dark btn-lg custom-btn">BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Product 18 -->
-                <div class="col-md-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body p-4">
-                            <div class="icon mb-3">
-                                <i class="fas fa-box-open text-warning fa-2x"></i>
-                            </div>
-                            <img src="{%static 'img\product\shampoo.jpg'%}" alt="Product " class="img-fluid mb-3 service-img">
-                            <h3>Product 4</h3>
-                            <p>Description of Product 4.</p>
-                            <div class="d-flex justify-content-between align-items-center mt-4">
-                                <h3>$10</h3>
-                                <button type="button" class="btn btn-outline-dark btn-lg custom-btn">BUY</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+{% block body %}
 
+<br><br><br>
 
-            </div>
+<img src="{% static 'img/banner1.jpg' %}" class="d-block w-100">
+
+<section class="bg-light py-5">
+
+    <div class="container">
+
+        <h2 class="text-center mb-5 fw-bold">
+            Shop Our Products
+        </h2>
+
+      <div class="d-flex flex-wrap gap-5 justify-content-center">
+
+    {% for product in products %}
+
+    <div class="product-card">
+
+        <div class="card h-100 shadow border-0">
+
+            
+            <img src="{{ product.image.url }}"
+                 class="card-img-top service-img">
+
+            <div class="card-body d-flex flex-column">
+
+    <h6 class="fw-bold mb-1 text-truncate">
+        {{ product.name }}
+    </h6>
+
+    <p class="text-muted small flex-grow-1">
+        {{ product.description|truncatewords:8 }}
+    </p>
+
+    
+    <div class="d-flex justify-content-between align-items-center mt-auto">
+
+        <span class="fw-bold text-danger">
+            Rs{{ product.price }}
+        </span>
+
+        <button
+            class="btn btn-danger btn-sm"
+            data-bs-toggle="modal"
+            data-bs-target="#cartModal"
+            data-id="{{ product.id }}"
+            data-image="{{ product.image.url }}"
+            data-name="{{ product.name }}"
+            data-description="{{ product.description }}"
+            data-price="{{ product.price }}">
+            Add
+        </button>
+
+    </div>
+
+</div>
         </div>
-    </section>
 
-    <style>
-        .service-img {
-            transition: transform 0.3s ease;
-            height: 200px;
-            object-fit: cover;
-        }
+    </div>
 
-        .card:hover .service-img {
-            transform: scale(1.1);
-        }
+    {% endfor %}
 
-        .card-body {
-            background: linear-gradient(135deg, #f6f6f6 0%, #e9ecef 100%);
-            border-radius: 10px;
-        }
+</div>
 
-        .icon {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .custom-btn:hover {
-            background-color: #D2042D;
-            color: white; 
-            border-color: #D2042D; 
-        }
-    </style>
+    </div>
 
-    {% endblock body %}
+</section>
+
+<style>
+
+.product-card{
+    width: 20%;     
+          
+    min-width: 180px;       
+}
+
+.card{
+    height: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.service-img{
+    height: 160px;
+    object-fit: cover;
+}
+
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+</style>
+
+
+
+<div class="modal fade" id="cartModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Add to Cart</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <form method="POST" action="{% url 'add_to_cart' %}">
+                {% csrf_token %}
+
+                <div class="modal-body text-center">
+
+                    <img id="modalImage" class="img-fluid mb-3" style="height:150px;">
+
+                    <h4 id="modalName"></h4>
+                    <p id="modalDescription"></p>
+                    <h5>Rs: <h5 id="modalPrice"> </h5></h5>
+                    <input type="hidden" name="product_id" id="modalProductId">
+
+                    
+                    <div class="row mt-3">
+
+                        
+                        <div class="col-6">
+                            <label class="form-label">Size</label>
+                            <select name="size" class="form-select">
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                            </select>
+                        </div>
+
+                        
+                        <div class="col-6">
+                            <label class="form-label">Quantity</label>
+                            <input type="number"
+                                   name="quantity"
+                                   id="modalQty"
+                                   value="1"
+                                   min="1"
+                                   class="form-control text-center">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button"
+                            class="btn btn-secondary"
+                            data-bs-dismiss="modal">
+                        Close
+                    </button>
+
+                   
+                    <button type="submit" class="btn btn-danger">
+                        Add To Cart
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const cartModal = document.getElementById('cartModal');
+
+    cartModal.addEventListener('show.bs.modal', function (event) {
+
+        const button = event.relatedTarget;
+
+        document.getElementById('modalProductId').value = button.getAttribute('data-id');
+        document.getElementById('modalImage').src = button.getAttribute('data-image');
+        document.getElementById('modalName').innerText = button.getAttribute('data-name');
+        document.getElementById('modalDescription').innerText = button.getAttribute('data-description');
+        document.getElementById('modalPrice').innerText = button.getAttribute('data-price');
+
+    });
+
+});
+</script>
+{% endblock %}

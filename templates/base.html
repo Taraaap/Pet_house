@@ -5,8 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>  {% block title %}{% endblock title %} Pet_House</title>
     {% load static %}
-    <!-- Local Bootstrap CSS -->
+
+    {% if messages %}
+  {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show">
+      {{ message }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+  {% endfor %}
+{% endif %}
+
+
+   
+     
      <link href="{% static 'bootstrap-5.3.3-dist/css/bootstrap.min.css' %}" rel="stylesheet">
+     
   </head>
   <body>
     <header class="bg-white text-dark py-2 border shadow-sm hover-effect fixed-top">
@@ -17,42 +30,181 @@
               <h2 class="h3 m-1 fw-bold">STAR Pet House</h2>
           </div>
           <nav>
-              <ul class="nav">
-                  <li class="nav-item"><a class="nav-link text-dark" href="/">Home</a></li>
-                  <li class="nav-item"><a class="nav-link text-dark" href="/#about">About Us</a></li>
-                  <li class="nav-item"><a class="nav-link text-dark" href="/service">Services</a></li>
-                  <li class="nav-item"><a class="nav-link text-dark" href="/product">Product</a></li>
-                  <li class="nav-item"><a class="nav-link text-dark" href="/contact">Contact</a></li>
-              </ul>
+             <ul class="nav align-items-center">
 
+    <li class="nav-item">
+        <a class="nav-link text-dark" href="/">Home</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link text-dark" href="/#about">About Us</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link text-dark" href="/product">Product</a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link text-dark" href="/contact">Contact</a>
+    </li>
+
+
+    {% if user.is_authenticated %}
+
+        
+        <li class="nav-item ms-3">
+            <a class="nav-link text-dark" href="/cart">
+                🛒cart
+            </a>
+        </li>
+
+        
+        <li class="nav-item dropdown ms-3">
+
+            <a class="nav-link text-dark dropdown-toggle d-flex align-items-center"
+               href="#"
+               id="userMenu"
+               role="button"
+               data-bs-toggle="dropdown"
+               aria-expanded="false">
+
+              <i class="bi bi-person-fill text-dark"></i> {{ user.username }}
+
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userMenu">
+
+                <li>
+                    <a class="dropdown-item" href="/profile">
+                        User Info
+                    </a>
+                </li>
+
+                <li>
+                    <a class="dropdown-item" href="{% url 'previousorder' %}">
+                         Orders
+                    </a>
+                </li>
+
+                <li><hr class="dropdown-divider"></li>
+
+                <li>
+                    <a class="dropdown-item text-danger" href="{% url 'logout' %}">
+                  Logout
+              </a>
+                </li>
+
+            </ul>
+
+        </li>
+
+    {% else %}
+
+       
+        <li class="nav-item ms-3">
+            <a class="nav-link text-dark" href="/login">Login</a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="/register">Sign Up</a>
+        </li>
+
+                {% endif %}
+
+            </ul>
+            </ul>
           </nav>
       </div>
   </header>
+
+  
   <style>
       .hover-effect:hover {
           transform: scale(1.05);
       }
+      .footer-links a:hover {
+          color: red;
+          text-decoration: underline;
+      }
+
   </style> 
 
 
-{% if messages %}
-{% for message in messages %}
-    <div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0 " role="alert">
-      {{ message }}
-      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
-      </button>
-    </div>
-    {% endfor %}
-    {% endif %}
-    {% block body %}{% endblock body %}
-    {% block footer %}
-     <!-- Footer Section -->
- <footer class="bg-dark text-white text-center py-3">
-  <div class="container">
-      <p>&copy; 2024 STAR Pet House. All rights reserved.</p>
-  </div>
-</footer>{% endblock %} 
 
+
+    {% block body %}{% endblock body %}
+   
+
+ 
+{% block footer %}
+
+<footer class="bg-light text-dark pt-5 pb-3 border-top">
+  <div class="container">
+    <div class="row">
+      
+      <div class="col-md-3 mb-4">
+        <img src="{% static 'img\logo.jpeg' %}" alt="Pet House Logo" class="mb-2" style="width: 100px;">
+        <h5 class="fw-bold">STAR Pet House</h5>
+        <p class="small mb-1"><strong>Address:</strong> Bharatpur, Chitwan, Nepal</p>
+        <p class="small mb-1"><strong>Phone:</strong> +977-9800000000</p>
+        <p class="small mb-1"><strong>Email:</strong> starpethouse@12gmail.com</p>
+        <p class="small"><strong>Hours:</strong> Tue – Sun</p>
+      </div>
+
+      
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-bold">About</h6>
+        <ul class="list-unstyled">
+          <li><a href="/#about" class="text-decoration-none text-dark small">About Us</a></li>
+          <li><a href="{% url 'policy' %}#privacy-policy" class="text-decoration-none text-dark small">Privacy Policy</a></li>
+          <li><a href="{% url 'policy' %}#terms-conditions"  class="text-decoration-none text-dark small">Terms & Conditions</a></li>
+          <li><a href="/contact" class="text-decoration-none text-dark small">Contact</a></li>
+        </ul>
+      </div>
+
+      
+
+      
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-bold mb-3">Services</h6>
+        <ul class="list-unstyled small">
+          <li><a href="/service#pet-grooming" class="text-decoration-none text-dark">Pet Grooming</a></li>
+          <li><a href="/service#vet-consultation" class="text-decoration-none text-dark">Vet Consultation</a></li>
+          <li><a href="/service#boarding" class="text-decoration-none text-dark">Pet Boarding</a></li>
+          <li><a href="/service#training" class="text-decoration-none text-dark">Training Programs</a></li>
+        </ul>
+      </div>
+
+      
+      <div class="col-md-3 mb-4">
+        <h6 class="fw-bold">My Account</h6>
+        <ul class="list-unstyled small">
+          {% if user.is_authenticated %}
+            <li><a href="/previousorder" class="text-decoration-none text-dark">My Orders</a></li>
+          {% else %}
+            <li><a href="/login/" class="text-decoration-none text-dark">Sign In</a></li>
+          {% endif %}
+          <li><a href="{% url 'policy' %}#help-center" class="text-decoration-none text-dark">Help Center</a></li>
+        </ul>
+        <div class="mt-3">
+          <h6 class="fw-bold gap-3">Follow Us</h6>
+
+          <div class="footer-links d-flex gap-3">
+              <a href="#">Facebook</a>
+              <a href="#">Instagram</a>
+              <a href="#">Twitter</a>
+              
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center pt-3 border-top mt-3">
+      <p class="mb-0 small">&copy; {% now "Y" %} <strong class="text-danger">STAR PET HOUSE</strong>. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+{% endblock %}
     <script src="{% static 'bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js' %}"></script>
   </body>
 </html>
